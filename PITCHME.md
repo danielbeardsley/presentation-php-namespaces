@@ -35,16 +35,17 @@ class Widget {
 
 Reference:  `\SomeNamespace\MyFeature\Widget`
 * Aliases (`use`)
-   * `use \Name\Path [as LocalAlias]`
+   * php: `use \Name\Path [as LocalAlias]`
    * Local alias defaults to the last component of the name
    * It's just string replacement
 
 ---
 
 ### What we do
-* \iFixit -- all the things
-   * \iFixit\Framework: Everything not feature specific
-   * \iFixit\Admin: Features related to Admin
+
+* `\iFixit` -- all the things
+   * `\iFixit\Framework`: Everything not feature specific
+   * `\iFixit\Admin`: Features related to Admin
    * ... The future is unwritten
 
 Classes should be grouped by feature, not type
