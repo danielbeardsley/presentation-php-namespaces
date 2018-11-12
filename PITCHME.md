@@ -10,8 +10,8 @@ But\you\get\over\it
 
 What it looks like:
 
-@[1] namespace declaration applies to whole file
-@[3-5] All further declarations are in the namespace
+@[1] (namespace declaration applies to whole file)
+@[3-5] (All further declarations are in the namespace)
 ```php
 namespace SomeNamespace\MyFeature
 
@@ -78,9 +78,9 @@ things to be separated
 
 ### Cached
 
-@[2-4] Static factory function (there are several)
-@[1-5] Usage: function that returns `Cached`
-@[7-9] Callers get an object
+@[2-4] (Static factory function there are several)
+@[1-5] (Usage: function that returns `Cached`)
+@[7-9] (Callers get an object)
 ```php
 function cachedSomething(): Cached {
    return Cached::byKey("something-$id", function() use ($id) {
