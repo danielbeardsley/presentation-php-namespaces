@@ -1,4 +1,4 @@
-# Namespaces
+## Namespaces
 
 The\worst\part\is\the\backslashes
 
@@ -6,7 +6,7 @@ But\you\get\over\it
 
 ---
 
-## Logical grouping of your things
+### Logical grouping of your things
 
 What it looks like:
 
@@ -22,7 +22,7 @@ class Widget {
 
 ---
 
-## What it means inside Widget
+### What it means inside Widget
 
 * Think:  `cd SomeNamespace\MyFeature`
 * Global namespace:  `\`
@@ -31,7 +31,7 @@ class Widget {
 
 ---
 
-## What it means outside Widget
+### What it means outside Widget
 
 Reference:  `\SomeNamespace\MyFeature\Widget`
 * Aliases (`use`)
@@ -41,7 +41,7 @@ Reference:  `\SomeNamespace\MyFeature\Widget`
 
 ---
 
-## What we do
+### What we do
 * \iFixit -- all the things
    * \iFixit\Framework: Everything not feature specific
    * \iFixit\Admin: Features related to Admin
@@ -51,7 +51,7 @@ Classes should be grouped by feature, not type
 
 ---
 
-## Notes:
+### Notes:
 
 * PSR4: Namespaces should match directories
   * Don't need to run  `composer install`
@@ -75,7 +75,7 @@ Easy to mistake
 
 ---
 
-## Cached
+### Cached
 
 ```php
 function cachedSomething(): Cached {
