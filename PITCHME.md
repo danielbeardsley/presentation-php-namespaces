@@ -33,8 +33,10 @@ class Widget {
 
 ### What it means outside Widget
 
-Reference:  `\SomeNamespace\MyFeature\Widget`
-* Aliases (`use`)
+#### Reference
+`\SomeNamespace\MyFeature\Widget`
+
+#### Aliases (`use`)
    * php: `use \Name\Path [as LocalAlias]`
    * Local alias defaults to the last component of the name
    * It's just string replacement
