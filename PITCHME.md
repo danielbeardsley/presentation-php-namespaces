@@ -11,11 +11,11 @@ But\you\get\over\it
 What it looks like:
 
 ```php
-    namespace SomeNamespace\MyFeature
+namespace SomeNamespace\MyFeature
 
-    class Widget {
-        ...
-    }
+class Widget {
+    ...
+}
 ```
 
 ---
@@ -76,15 +76,15 @@ Easy to mistake
 ## Cached
 
 ```php
-    function cachedSomething(): Cached {
-       return Cached::byKey("something-$id", function() use ($id) {
-          return Something::find($id);
-       }, CACHE_HOUR, Cache::getBackend());
-    }
- 
-    $something = cachedSomething()->get()
- 
-    cachedSomething()->delete()
+function cachedSomething(): Cached {
+   return Cached::byKey("something-$id", function() use ($id) {
+      return Something::find($id);
+   }, CACHE_HOUR, Cache::getBackend());
+}
+
+$something = cachedSomething()->get()
+
+cachedSomething()->delete()
 ```
 
 ---
