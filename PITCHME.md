@@ -17,6 +17,8 @@ class Widget {
     ...
 }
 ```
+@[1] namespace declaration applies to whole file
+@[3-5] All further declarations are in the namespace
 
 ---
 
