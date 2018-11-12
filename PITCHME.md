@@ -22,18 +22,18 @@ class Widget {
 
 ## What it means inside Widget
 
-* Think: `cd SomeNamespace\MyFeature`
-* Global namespace: `\`
+* Think:  `cd SomeNamespace\MyFeature`
+* Global namespace:  `\`
 * Everything else is relative
-* No, you can't `../`
+* No, you can't  `../`
 
 ---
 
 ## What it means outside Widget
 
-Reference: `\SomeNamespace\MyFeature\Widget`
+Reference:  `\SomeNamespace\MyFeature\Widget`
 * Aliases (`use`)
-   * `use \Some\Namespace\Path [as LocalAlias]`
+   * `use \Name\Path [as LocalAlias]`
    * Local alias defaults to the last component of the name
    * It's just string replacement
 
@@ -49,10 +49,10 @@ Classes should be grouped by feature, not type
 
 ---
 
-Notes:
+## Notes:
 
 * PSR4: Namespaces should match directories
-  * Don't need to run `composer install`
+  * Don't need to run  `composer install`
 * Functions can be namespaced and used just like classes
 
 * All classes are public :-(
