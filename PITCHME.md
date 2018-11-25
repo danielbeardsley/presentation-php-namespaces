@@ -69,6 +69,39 @@ Classes should be grouped by feature, not type
 The old way:
 related things ended up separate
 
+@[3,18] (Which Backend)
+@[2,13-15,20] (Cache Key)
+@[5] (Expiration)
+@[8-11] (Value Function)
+
+```php
+function getTitleCached($guideid) {
+   $key = getTitleCacheKey($guideid);
+   return Cache::getBackend()->getAndSet($key,
+      'getTitle',
+      CACHE_HOUR)
+}
+
+function getTitle($guideid) {
+   ...
+   return $title;
+}
+
+function getTitleCacheKey($guideid) {
+   return "guide-title-$guideid";
+}
+
+function deleteTitleCache($guideid) {
+   Cache::getBackend()->delete(getTitleCacheKey($guideid));
+}
+```
+
+
+
+---
+## Backend
+
+
 @ul
 
 * Which backend: `Cache::getBackend()`
@@ -82,7 +115,7 @@ related things ended up separate
 
 ---
 
-### Cached
+### Old Way
 
 @[2-4] (Static factory function - there are several)
 @[1-5] (Usage: function that returns `Cached`)
