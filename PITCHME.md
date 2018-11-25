@@ -80,18 +80,20 @@ things to be separated
 
 ### Cached
 
-@[2-4] (Static factory function there are several)
+@[2-4] (Static factory function - there are several)
 @[1-5] (Usage: function that returns `Cached`)
-@[7-9] (Callers get an object)
-```php
+@[7-11] (Callers get an object)
+```php5
 function cachedSomething(): Cached {
    return Cached::byKey("something-$id", function() use ($id) {
       return Something::find($id);
    }, CACHE_HOUR, Cache::getBackend());
 }
 
+// Then later:
 $something = cachedSomething()->get()
 
+// When things change:
 cachedSomething()->delete()
 ```
 
