@@ -66,13 +66,17 @@ Classes should be grouped by feature, not type
 
 ## Caching
 
-The old way allowed related
-things to be separated
+The old way:
+related things ended up separate
 
-* @ccs[fragment](Which backend: `Cache::getBackend()`)
+@ul
+
+* Which backend: `Cache::getBackend()`
 * Key format: `"something-$id"`
 * Expiration time: `CACHE_DAY`
 * function to cache: `Guide::find()`
+
+@ulend
 
 #### Easy to mistake
 
