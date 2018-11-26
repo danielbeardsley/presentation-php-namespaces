@@ -79,6 +79,31 @@ Four Decisions
 
 ---
 
+### `class Cached {`
+
+Like a promise, kinda.
+
+* Represents a key/value pair in memcache
+* Retreival: `->get()`
+* Disposal: `->delete()`
+
+---
+
+### Making one
+
+```php
+Cached::byKey(
+   $key,
+   $valueFunction,
+   $expireTime = CACHE_FOREVER,
+   $cacheBackend
+)
+```
+
+Also `Cached::memoizedByKey()`
+
+---
+
 ### The Old Way
 
 @[3,16] (Which Backend)
@@ -108,31 +133,6 @@ function deleteTitleCache($guideid) {
 
 ---
 
-### `class Cached {`
-
-Like a promise, kinda.
-
-* Represents a key/value pair in memcache
-* Retreival: `->get()`
-* Disposal: `->delete()`
-
----
-
-### Making one
-
-```php
-Cached::byKey(
-   $key,
-   $valueFunction,
-   $expireTime = CACHE_FOREVER,
-   $cacheBackend
-)
-```
-
-Also `Cached::memoizedByKey()`
-
----
-
 ### With `Cached`
 
 @[2-5] (Static factory function)
@@ -153,4 +153,3 @@ $something = cachedSomething()->get()
 cachedSomething()->delete()
 ```
 
----
