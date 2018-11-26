@@ -64,24 +64,34 @@ Classes should be grouped by feature, not type
 
 ---
 
-### The Old Way
-Related things ended up separate
+## Caching
 
-@[3,18] (Which Backend)
-@[2,13-15,20] (Cache Key)
-@[5] (Expiration)
-@[8-11] (Value Function)
+Four Parts
+
+@ul
+
+* Which backend: `Cache::getBackend()`
+* Key format: `"something-$id"`
+* Expiration time: `CACHE_DAY`
+* function to cache: `Guide::find()`
+
+@ulend
+
+### The Old Way
+
+@[3,17] (Which Backend)
+@[2,12-14,19] (Cache Key)
+@[4] (Expiration)
+@[7-10] (Value Function)
 
 ```php
 function getTitleCached($guideid) {
    $key = getTitleCacheKey($guideid);
-   return Cache::getBackend()->getAndSet($key,
-      'getTitle',
-      CACHE_HOUR)
+   return Cache::getBackend()->getAndSet(
+      $key, 'getTitle', CACHE_HOUR)
 }
 
 function getTitle($guideid) {
-   ...
    return $title;
 }
 
@@ -94,28 +104,21 @@ function deleteTitleCache($guideid) {
 }
 ```
 
-
-
 ---
-## Backend
 
+### `Cached`
 
-@ul
+Like a promise, kinda.
 
-* Which backend: `Cache::getBackend()`
-* Key format: `"something-$id"`
-* Expiration time: `CACHE_DAY`
-* function to cache: `Guide::find()`
-
-@ulend
-
-#### Easy to mistake
+* Represents a key/value pair in memcache
+* Retreival: `->get()`
+* Disposal: `->delete()`
 
 ---
 
-### Old Way
+### With `Cached`
 
-@[2-4] (Static factory function - there are several)
+@[2-4] (Static factory function)
 @[1-5] (Usage: function that returns `Cached`)
 @[7-11] (Callers get an object)
 ```php5
