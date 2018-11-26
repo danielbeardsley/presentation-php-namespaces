@@ -64,10 +64,8 @@ Classes should be grouped by feature, not type
 
 ---
 
-## Caching
-
-The old way:
-related things ended up separate
+### The Old Way
+Related things ended up separate
 
 @[3,18] (Which Backend)
 @[2,13-15,20] (Cache Key)

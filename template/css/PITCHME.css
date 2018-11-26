@@ -81,9 +81,7 @@ body {
 
 /** Code-Presenting Template Styles ***/
 .reveal code {
-   color: #FAA;
-   background-color: #333;
-   padding: 0.2em; 0.5em;
+   color: #C84;
 }
 
 /** Header-Footer Template Styles ***/
