@@ -120,12 +120,13 @@ Like a promise, kinda.
 
 ### With `Cached`
 
-@[2-4] (Static factory function)
-@[1-5] (Usage: function that returns `Cached`)
-@[7-11] (Callers get an object)
+@[2-5] (Static factory function)
+@[1-6] (Usage: function that returns `Cached`)
+@[8-12] (Callers get an object)
 ```php5
 function cachedSomething(): Cached {
-   return Cached::byKey("something-$id", function() use ($id) {
+   return Cached::byKey("something-$id",
+   function() use ($id) {
       return Something::find($id);
    }, CACHE_HOUR, Cache::getBackend());
 }
