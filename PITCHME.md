@@ -108,7 +108,7 @@ function deleteTitleCache($guideid) {
 
 ---
 
-### `Cached`
+### `class Cached {`
 
 Like a promise, kinda.
 
