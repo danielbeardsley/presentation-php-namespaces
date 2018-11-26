@@ -66,7 +66,7 @@ Classes should be grouped by feature, not type
 
 ## Caching
 
-Four Parts
+Four Decisions
 
 @ul
 
