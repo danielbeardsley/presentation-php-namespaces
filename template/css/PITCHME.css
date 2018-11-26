@@ -274,6 +274,7 @@ body {
   font-size: 1em;
   line-height: 1.2;
   border-radius: 10px;
+  max-height: 100vh;
 }
 
 @media (device-width: 100vw) and (device-height: 100vh) {
