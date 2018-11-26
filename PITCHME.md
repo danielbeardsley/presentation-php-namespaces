@@ -81,8 +81,8 @@ Four Decisions
 
 ### The Old Way
 
-@[3,17] (Which Backend)
-@[2,12-14,19] (Cache Key)
+@[3,16] (Which Backend)
+@[2,11-13,16] (Cache Key)
 @[4] (Expiration)
 @[7-10] (Value Function)
 
