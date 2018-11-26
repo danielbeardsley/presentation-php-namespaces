@@ -118,6 +118,21 @@ Like a promise, kinda.
 
 ---
 
+### Making one
+
+```php
+Cached::byKey(
+   $key,
+   $valueFunction,
+   $expireTime = CACHE_FOREVER,
+   $cacheBackend
+)
+```
+
+Also `Cached::memoizedByKey()`
+
+---
+
 ### With `Cached`
 
 @[2-5] (Static factory function)

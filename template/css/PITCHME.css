@@ -236,6 +236,10 @@ body {
   counter-increment: step-counter;
 }
 
+.reveal li {
+   line-height: 1.5em;
+}
+
 .reveal ol li::before {
   color: white;
   font-size: 80%;
